@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+require __DIR__ . "/../vendor/autoload.php";
+
+$path_to_store = (isset($argv[1]) ? $argv : null);
+if (!$path_to_store) {
+    echo "Path to store required\n";
+    exit(1);
+}
+
+$executor = new \PHPNotifier\Executor(
+    new \PHPNotifier\FileReader($path_to_store),
+    new \PHPNotifier\FileWriter($path_to_store)
+);
+
+$executor->run();
