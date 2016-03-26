@@ -32,6 +32,11 @@ class FileReader implements ReaderInterface
     public function getTasksToExecute()
     {
         $current_time = time();
+
+        if (!file_exists($this->db_name)) {
+            return [];
+        }
+
         $lines = file($this->db_name);
 
         $tasks = [];
