@@ -9,6 +9,15 @@ add to your composer.json - `"krydos/php-notifier": "dev-master"`
  
 Usage
 -----
+First of all you have to run a script that will be listening for new tasks and execute them when time came.
+`php ./vendor/bin/phpnotifier`
+or if you want to leave it working in background
+`nohup php ./vendor/bin/phpnotifier  & >/dev/null 2>&1 &`
+
+Using `nohup` you can see log output in `nohup.out` file. 
+
+How to create new tasks:
+
 ```php
 use \PHPNotifier\PHPNotifier;
 
@@ -37,6 +46,8 @@ $scheduler->scheduleTaskAtTime(1459382400, 'echo', [
 ```
 
 This method accepts unix timestamp as first argument. If you use `DateTime` PHP's object you can get this value by `getTimestamp()` method.
+
+**make sure that binary you're trying to execute is exists in your system**
  
 TODO
 ------
