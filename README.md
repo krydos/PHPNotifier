@@ -5,7 +5,7 @@ PHPNotifier
 
 Installation
 ------------
-add to your composer.json - `"krydos/php-notifier": "dev-master"`
+add to your composer.json - `"krydos/php-notifier": "*"`
  
 Usage
 -----
