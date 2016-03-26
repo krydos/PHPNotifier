@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
-require __DIR__ . "/../vendor/autoload.php";
+require __DIR__ . "/../../../autoload.php";
 
-$path_to_store = (isset($argv[1]) ? $argv : null);
+$path_to_store = (isset($argv[1]) ? $argv[1] : null);
 if (!$path_to_store) {
     echo "Path to store required\n";
     exit(1);
