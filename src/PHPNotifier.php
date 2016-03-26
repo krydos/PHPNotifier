@@ -13,6 +13,8 @@ use PHPNotifier\interfaces\RWInterface;
 
 class PHPNotifier
 {
+    const FILE_METHOD = 'File';
+
     /** @var  RWInterface $rw*/
     protected $rw;
 

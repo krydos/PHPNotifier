@@ -18,7 +18,7 @@ class PHPNotifierTest extends PHPUnit_Framework_TestCase
      */
     public function testExceptionWhenTryingToWriteIfWriterIsNotSet()
     {
-        $notifier = new \PHPNotifier\PHPNotifier('File', 'test');
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, 'test');
         $notifier->scheduleTaskAtTime(1000, '');
     }
 }

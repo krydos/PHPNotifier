@@ -12,7 +12,7 @@ class FileWriterTest extends PHPUnit_Framework_TestCase
     public function testStoreShouldBeCreatedAfterWrite()
     {
         $store_file = __DIR__ . '/tmp/file_for_test';
-        $phpNotifier = new \PHPNotifier\PHPNotifier('File', $store_file);
+        $phpNotifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, $store_file);
 
         $phpNotifier->scheduleTaskAtTime(1000, '');
 
@@ -24,7 +24,7 @@ class FileWriterTest extends PHPUnit_Framework_TestCase
     public function testStoreFileShouldNotBeEmptyAfterInsert()
     {
         $store_file = __DIR__ . '/tmp/file_for_test';
-        $phpNotifier = new \PHPNotifier\PHPNotifier('File', $store_file);
+        $phpNotifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, $store_file);
 
         $phpNotifier->scheduleTaskAtTime(1000, '');
 
@@ -38,7 +38,7 @@ class FileWriterTest extends PHPUnit_Framework_TestCase
     public function testRemoveTask()
     {
         $store_file = __DIR__ . '/tmp/file_for_test';
-        $notifier = new \PHPNotifier\PHPNotifier('File', $store_file);
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, $store_file);
 
         $current_time = time();
         $notifier->scheduleTaskAtTime($current_time - 1, 'ls');

@@ -13,7 +13,7 @@ class FileReaderTest extends PHPUnit_Framework_TestCase
     public function testGetTasksToExecute()
     {
         $store_file = __DIR__ . '/tmp/file_for_test';
-        $notifier = new \PHPNotifier\PHPNotifier('File', $store_file);
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, $store_file);
 
         $current_time = time();
 
@@ -37,7 +37,7 @@ class FileReaderTest extends PHPUnit_Framework_TestCase
     public function testGetTasksToExecuteIfThereIsNoTasks()
     {
         $store_file = __DIR__ . '/tmp/file_for_test';
-        $notifier = new \PHPNotifier\PHPNotifier('File', $store_file);
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, $store_file);
 
         $current_time = time();
 
