@@ -2,6 +2,7 @@
   "name": "krydos/php-notifier",
   "description": "PHP task scheduler",
   "license": "MIT",
+  "version": "0.1.0",
   "autoload": {
     "psr-4": {
       "PHPNotifier\\": "src"
