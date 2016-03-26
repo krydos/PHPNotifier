@@ -10,8 +10,11 @@ add to your composer.json - `"krydos/php-notifier": "dev-master"`
 Usage
 -----
 First of all you have to run a script that will be listening for new tasks and execute them when time came.
+
 `php ./vendor/bin/phpnotifier`
+
 or if you want to leave it working in background
+
 `nohup php ./vendor/bin/phpnotifier  & >/dev/null 2>&1 &`
 
 Using `nohup` you can see log output in `nohup.out` file. 
