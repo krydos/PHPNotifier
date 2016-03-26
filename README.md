@@ -15,7 +15,7 @@ First of all you have to run a script that will be listening for new tasks and e
 
 or if you want to leave it working in background
 
-`nohup php ./vendor/bin/phpnotifier  & >/dev/null 2>&1 &`
+`nohup php ./vendor/bin/phpnotifier /absolute/path/to/db.file & >/dev/null 2>&1 &`
 
 Using `nohup` you can see log output in `nohup.out` file. 
 
