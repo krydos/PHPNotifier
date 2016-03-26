@@ -85,6 +85,10 @@ class Task implements TaskInterface
             }
         }
 
+        if (is_string($this->params)) {
+            return $this->params;
+        }
+
         return $params_string;
     }
 
