@@ -11,7 +11,7 @@ Usage
 -----
 First of all you have to run a script that will be listening for new tasks and execute them when time came.
 
-`php ./vendor/bin/phpnotifier`
+`php ./vendor/bin/phpnotifier /absolute/path/to/db.file`
 
 or if you want to leave it working in background
 
