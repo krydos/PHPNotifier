@@ -39,7 +39,7 @@ class Executor implements ExecutorInterface
             if (!empty($tasks)) {
                 echo "Found " . count($tasks) . " to execute\n";
                 foreach ($tasks as $task) {
-                    echo "going to execute task - " . $task->getId() . " ('.$task->getCommand() . $task->getParamsString().')\n";
+                    echo "going to execute task - " . $task->getId() . ' ' . $task->getCommand() . ' ' . $task->getParamsString() . "\n";
                     $task->execute();
                     echo "executed\n";
                     echo "removing task...\t";
