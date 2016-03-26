@@ -24,7 +24,7 @@ How to create new tasks:
 ```php
 use \PHPNotifier\PHPNotifier;
 
-$scheduler = new PHPNotifier(PHPNotifier::FILE_METHOD, '/absolute/path/where/tasks/will/be/stored');
+$scheduler = new PHPNotifier(PHPNotifier::FILE_METHOD, '/absolute/path/to/db.file');
 $scheduler->scheduleTaskIn(10, 'echo', [
     'Hello world!'
     '>'
@@ -40,7 +40,7 @@ there is another method exists - `scheduleTaskAtTime` with same signature.
 ```php
 use \PHPNotifier\PHPNotifier;
 
-$scheduler = new PHPNotifier(PHPNotifier::FILE_METHOD, '/absolute/path/where/tasks/will/be/stored');
+$scheduler = new PHPNotifier(PHPNotifier::FILE_METHOD, '/absolute/path/to/db.file');
 $scheduler->scheduleTaskAtTime(1459382400, 'echo', [
     'Hello world!'
     '>'
