@@ -21,4 +21,13 @@ class PHPNotifierTest extends PHPUnit_Framework_TestCase
         $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, 'test');
         $notifier->scheduleTaskAtTime(1000, '');
     }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testNotNumericTime()
+    {
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, 'test');
+        $notifier->scheduleTaskAtTime('unknown string', '', ['hello', 'world']);
+    }
 }

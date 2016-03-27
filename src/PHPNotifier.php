@@ -31,7 +31,14 @@ class PHPNotifier
 
     public function scheduleTaskAtTime($when, $command, array $params = [])
     {
-        $task = new Task($when, $command, $params);
+        if ($when instanceof \DateTime) {
+            $task = new Task($when->getTimestamp(), $command, $params);
+        } elseif (is_numeric($when)) {
+            $task = new Task($when, $command, $params);
+        } else {
+            throw new \InvalidArgumentException('time argument is not supported. Only integer and DateTime allowed');
+        }
+
         $this->schedule($task);
     }
 
