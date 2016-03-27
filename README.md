@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/KryDos/PHPNotifier.svg?branch=master)](https://travis-ci.org/KryDos/PHPNotifier)
+
 PHPNotifier
 ===========
 
