@@ -29,7 +29,7 @@ class FileReaderTest extends PHPUnit_Framework_TestCase
         /** @var Task[] $tasks */
         $tasks = $notifier->getReader()->getTasksToExecute();
         $this->assertFalse(empty($tasks));
-        $this->containsOnlyInstancesOf(Task::class);
+        $this->containsOnlyInstancesOf(get_class($tasks[0]));
 
         unlink($store_file);
     }
