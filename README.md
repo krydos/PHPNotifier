@@ -48,7 +48,7 @@ $scheduler->scheduleTaskAtTime(1459382400, 'echo', [
 ]);  
 ```
 
-This method accepts unix timestamp as first argument. If you use `DateTime` PHP's object you can get this value by `getTimestamp()` method.
+This method accepts unix timestamp or \DateTime object as first argument. If you use `DateTime` PHP's object you can get this value by `getTimestamp()` method.
 
 **make sure that binary you're trying to execute is exists in your system**
  
@@ -57,7 +57,7 @@ TODO
  
 * support Redis as task store method
 * support as many store methods as possible
-* ability to accept DateTime as first argument for `scheduleTaskAtTime` method
+* ~~ability to accept DateTime as first argument for `scheduleTaskAtTime` method~~
 * ability to accept any valid date string as first argument of `scheduleTaskAtTime` method
 * ability to schedule repeatable tasks
  
