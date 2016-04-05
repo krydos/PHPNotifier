@@ -60,7 +60,7 @@ TODO
 * support Redis as task store method
 * support as many store methods as possible
 * ~~ability to accept DateTime as first argument for `scheduleTaskAtTime` method~~
-* ability to accept any valid date string as first argument of `scheduleTaskAtTime` method
+* ~~ability to accept any valid date string as first argument of `scheduleTaskAtTime` method~~
 * ability to schedule repeatable tasks
  
  

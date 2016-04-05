@@ -30,4 +30,10 @@ class PHPNotifierTest extends PHPUnit_Framework_TestCase
         $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, 'test');
         $notifier->scheduleTaskAtTime('unknown string', '', ['hello', 'world']);
     }
+
+    public function testValidDateStringShouldBeAccepted()
+    {
+        $notifier = new \PHPNotifier\PHPNotifier(\PHPNotifier\PHPNotifier::FILE_METHOD, 'testdir');
+        $notifier->scheduleTaskAtTime('2016-04-04 00:00:00', '', []);
+    }
 }

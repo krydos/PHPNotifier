@@ -52,8 +52,10 @@ class PHPNotifier
             $task = new Task($when->getTimestamp(), $command, $params);
         } elseif (is_numeric($when)) {
             $task = new Task($when, $command, $params);
+        } elseif(is_string($when) && ($timestamp = strtotime($when))) {
+            $task = new Task($timestamp, $command, $params);
         } else {
-            throw new \InvalidArgumentException('time argument is not supported. Only integer and DateTime allowed');
+            throw new \InvalidArgumentException('time argument is not supported. Only integer, DateTime or valid date string are allowed');
         }
 
         $this->schedule($task);
